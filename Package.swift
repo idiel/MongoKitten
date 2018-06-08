@@ -3,25 +3,25 @@ import PackageDescription
 
 var package = Package(
     name: "MongoKitten",
-    targets: [
-        Target(name: "GeoJSON"),
-        Target(name: "MongoSocket"),
-        Target(name: "ExtendedJSON"),
-        Target(name: "MongoKitten", dependencies: ["GeoJSON", "MongoSocket", "ExtendedJSON"])
-        ],
     dependencies: [
         // For MongoDB Documents
-        .Package(url: "https://github.com/idiel/BSON.git", .revision("7206cc7")),
+        .package(url: "https://github.com/idiel/BSON.git", .revision("7206cc7")),
         
         // For ExtendedJSON support
-        .Package(url: "https://github.com/OpenKitten/Cheetah.git", majorVersion: 2),
+        .package(url: "https://github.com/OpenKitten/Cheetah.git", from: Version(2,0,0)),
 
         // Authentication
-        .Package(url: "https://github.com/OpenKitten/CryptoKitten.git", majorVersion: 0, minor: 2),
+        .package(url: "https://github.com/OpenKitten/CryptoKitten.git", from: Version(0,2,0)),
 
         // Asynchronous behaviour
-        .Package(url: "https://github.com/OpenKitten/Schrodinger.git", majorVersion: 1),
-    ]
+        .package(url: "https://github.com/OpenKitten/Schrodinger.git", from: Version(1,0,0)),
+    ],
+    targets: [
+        .target(name: "GeoJSON"),
+        .target(name: "MongoSocket"),
+        .target(name: "ExtendedJSON"),
+        .target(name: "MongoKitten", dependencies: ["GeoJSON", "MongoSocket", "ExtendedJSON"])
+        ]
 )
 
 // Provides Sockets + SSL
