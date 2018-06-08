@@ -16,7 +16,7 @@ var package = Package(
         .package(url: "https://github.com/OpenKitten/Cheetah.git", from: Version(2,0,0)),
 
         // Authentication
-        .package(url: "https://github.com/OpenKitten/CryptoKitten.git", from: Version(0,2,0)),
+        .package(url: "https://github.com/idiel/CryptoKitten.git", .revision("1698677")),
 
         // Asynchronous behaviour
         .package(url: "https://github.com/OpenKitten/Schrodinger.git", from: Version(1,0,0)),
