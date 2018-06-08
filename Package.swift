@@ -10,7 +10,7 @@ var package = Package(
     ],
     dependencies: [
         // For MongoDB Documents
-        .package(url: "https://github.com/idiel/BSON.git", .revision("7206cc7")),
+        .package(url: "https://github.com/idiel/BSON.git", .revision("c19801f")),
         
         // For ExtendedJSON support
         .package(url: "https://github.com/OpenKitten/Cheetah.git", from: Version(2,0,0)),
