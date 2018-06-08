@@ -5,7 +5,7 @@ var package = Package(
     name: "MongoKitten",
     products: [
         .library(
-            name:"MongoKitten", 
+            name:"MongoKitten",
             targets: ["MongoKitten"]),
     ],
     dependencies: [
@@ -16,7 +16,7 @@ var package = Package(
         .package(url: "https://github.com/OpenKitten/Cheetah.git", from: Version(2,0,0)),
 
         // Authentication
-        .package(url: "https://github.com/idiel/CryptoKitten.git", .revision("67dae36")),
+        .package(url: "https://github.com/idiel/CryptoKitten.git", .revision("5f65d65")),
 
         // Asynchronous behaviour
         .package(url: "https://github.com/OpenKitten/Schrodinger.git", from: Version(1,0,0)),
