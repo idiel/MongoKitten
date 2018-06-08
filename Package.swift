@@ -3,6 +3,11 @@ import PackageDescription
 
 var package = Package(
     name: "MongoKitten",
+    products: [
+        .library(
+            name:"MongoKitten", 
+            targets: ["MongoKitten"]),
+    ],
     dependencies: [
         // For MongoDB Documents
         .package(url: "https://github.com/idiel/BSON.git", .revision("7206cc7")),
